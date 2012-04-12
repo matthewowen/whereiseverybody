@@ -8,7 +8,7 @@ if (Meteor.is_client) {
 	People.remove();
 
 	setTimeout(function () {
-		google.maps.event.addListener(peopleMap, 'click', function(event) {
+		google.maps.event.addListener(peopleMap, 'rightclick', function(event) {
 			var username = prompt("Enter yr name to add yrself to the map")
 			if (!(username == null)) {
 				People.insert({name: username, date: new Date().toUTCString(), lat: event.latLng.Ya, lon: event.latLng.Za})
