@@ -1,6 +1,10 @@
 People = new Meteor.Collection('people');
 // {name: 'me', date: 'somedate' lat: '0.1345', lon: '51.735'}
 
+
+// all this should probably go under the client bit
+// but i was having trouble with execution order and this was a quick workaround
+// hey-ho
 if (Meteor.is_client) {
 
 	map_people();
